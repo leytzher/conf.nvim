@@ -28,6 +28,30 @@ return require('packer').startup(function(use)
     "williamboman/mason-lspconfig.nvim",
     "neovim/nvim-lspconfig",
   }
+  -- nvim-autopairs
+  use {
+    "windwp/nvim-autopairs",
+    config = function() require("nvim-autopairs").setup {} end
+  }
+
+  -- which-key plugin
+  use {
+    "folke/which-key.nvim",
+    config = function()
+      vim.o.timeout = true
+      vim.o.timeoutlen = 300
+    end
+  }
+
+  -- indent-blankline plugin
+  use "lukas-reineke/indent-blankline.nvim"
+
+  -- oil 
+  use "stevearc/oil.nvim"
+    
+
+  -- color theme
+  use {"catppuccin/nvim", as = "catppuccin"}
 
   -- My plugins here
   -- use 'foo1/bar1.nvim'
