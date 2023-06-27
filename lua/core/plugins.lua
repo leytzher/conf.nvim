@@ -53,6 +53,13 @@ return require('packer').startup(function(use)
   -- color theme
   use {"catppuccin/nvim", as = "catppuccin"}
 
+  use {
+    "startup-nvim/startup.nvim",
+    requires = {"nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim"},
+    config = function()
+      require"startup".setup({theme="evil"})
+    end
+    }
   -- My plugins here
   -- use 'foo1/bar1.nvim'
   -- use 'foo2/bar2.nvim'
