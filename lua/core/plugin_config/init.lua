@@ -8,4 +8,6 @@ require("core.plugin_config.which-key_config")
 require("core.plugin_config.indent-blankline")
 require("core.plugin_config.oil_config")
 require("core.plugin_config.catppuccin")
+require("core.plugin_config.code-completion")
+require("core.plugin_config.toggleterm")
 

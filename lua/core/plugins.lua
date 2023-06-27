@@ -60,6 +60,46 @@ return require('packer').startup(function(use)
       require"startup".setup({theme="evil"})
     end
     }
+
+    -- Hrsh7th Code Completion Suite
+    use 'hrsh7th/nvim-cmp' 
+    use 'hrsh7th/cmp-nvim-lsp'
+    use 'hrsh7th/cmp-nvim-lua'
+    use 'hrsh7th/cmp-nvim-lsp-signature-help'
+    use 'hrsh7th/cmp-vsnip'                             
+    use 'hrsh7th/cmp-path'                              
+    use 'hrsh7th/cmp-buffer'                            
+    use 'hrsh7th/vim-vsnip'
+    -- toggle terminal
+    use 'akinsho/toggleterm.nvim'
+    -- TODO comments
+    use {
+      "folke/todo-comments.nvim",
+      dependencies = {"nvim-lua/plenary.nvim"},
+      config = function () require("todo-comments").setup{} end
+    }
+
+    -- Comments: gcc to line toggle current line; gbc block comment (it only works in normal mode)
+    use {
+      'numToStr/Comment.nvim',
+      config = function()
+        require('Comment').setup()
+      end
+    }
+    use({
+      "utilyre/barbecue.nvim",
+      tag = "*",
+      requires = {
+        "SmiteshP/nvim-navic",
+        "nvim-tree/nvim-web-devicons", -- optional dependency
+      },
+      after = "nvim-web-devicons", -- keep this if you're using NvChad
+      config = function()
+        require("barbecue").setup()
+      end,
+    })
+
+
   -- My plugins here
   -- use 'foo1/bar1.nvim'
   -- use 'foo2/bar2.nvim'
