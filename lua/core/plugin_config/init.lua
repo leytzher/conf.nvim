@@ -10,4 +10,7 @@ require("core.plugin_config.oil_config")
 require("core.plugin_config.catppuccin")
 require("core.plugin_config.code-completion")
 require("core.plugin_config.toggleterm")
+require("core.plugin_config.hop_config")
+require("core.plugin_config.illuminate")
+require("core.plugin_config.symbols-outline")
 

@@ -99,10 +99,25 @@ return require('packer').startup(function(use)
       end,
     })
 
+    -- hop
 
-  -- My plugins here
-  -- use 'foo1/bar1.nvim'
-  -- use 'foo2/bar2.nvim'
+    use {
+      'phaazon/hop.nvim',
+      branch = 'v2', -- optional but strongly recommended
+      config = function()
+        -- you can configure Hop the way you like here; see :h hop-config
+        require'hop'.setup { keys = 'etovxqpdygfblzhckisuran' }
+      end
+      }
+
+    -- Illuminate
+    use {
+      'RRethy/vim-illuminate'
+    }
+
+  use {
+    'simrat39/symbols-outline.nvim'
+  }
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
