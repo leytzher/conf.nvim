@@ -1,6 +1,6 @@
 require("mason").setup()
 require("mason-lspconfig").setup({
-  ensure_installed = { "lua_ls", "tsserver", "tailwindcss","jedi_language_server", "svelte" }
+  ensure_installed = { "lua_ls", "tsserver", "tailwindcss","jedi_language_server", "svelte", "emmet_ls" }
 })
 
 local on_attach = function(_, bufnr)
@@ -24,5 +24,7 @@ require("lspconfig").jedi_language_server.setup {
 require("lspconfig").tailwindcss.setup {
   on_attach = on_attach}
 require("lspconfig").svelte.setup {
+  on_attach = on_attach}
+require("lspconfig").emmet_ls.setup {
   on_attach = on_attach}
 
