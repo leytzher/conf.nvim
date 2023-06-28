@@ -13,5 +13,5 @@ require("core.plugin_config.toggleterm")
 require("core.plugin_config.hop_config")
 require("core.plugin_config.illuminate")
 require("core.plugin_config.symbols-outline")
-require("core.plugin_config.copilot")
+require("core.plugin_config.goto")
 
